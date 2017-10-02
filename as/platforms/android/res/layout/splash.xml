@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/icon_512"/>
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ababab"
+        android:text="아름다운 우리들의 성이야기"
+        android:id="@+id/tv1"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#7b51fb"
+        android:text="아우성"
+        android:id="@+id/tv"
+        android:textSize="35sp"/>
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright all rights reserved by 2017아우성service."
+        android:textColor="#dedede"/>
+</RelativeLayout>
