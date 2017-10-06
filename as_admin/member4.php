@@ -13,14 +13,14 @@
 	?>
 	<table id='gv'>
 		<tr>
-			<td>프로필사진</td>
-			<td>핸드폰</td>
+			<td>앱아이콘</td>
+			<td>URL</td>
 			<td>제목</td>
 			<td>내용</td>
 			<td>저장</td>
 		</tr>
 		<tr>
-			<td><form name="upload-form" action="upload.php" method="post" enctype="multipart/form-data">
+			<td><form name="upload-form" action="upload4.php" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="MAX_FILE_SIZE" value="25242880"/>
 			<input type=file name=upload id=upload>
 			<input type=submit value='이미지업로드'>
@@ -30,15 +30,15 @@
 			?></td>
 			<td><input type=text class='inputtext' id=phone></td>
 			<td><input type=text class='inputtext' id=title></td>
-			<td><textarea rows=5 cols=50 id=content></textarea></td>
+			<td><input type=text class='inputtext' id=content></td>
 			<td><a href=#><div class=btn onclick='save()'>저장</div></a></td>
 		</tr>
 	</table>
 	<table id='mem'>
 		<tr>
 			<td>순번</td>
-			<td>프로필사진</td>
-			<td>핸드폰</td>
+			<td>앱아이콘</td>
+			<td>URL</td>
 			<td>제목</td>
 			<td>내용</td>
 			<td>수정</td>
@@ -48,7 +48,7 @@
 				include ("dblib.php");
 				$conn=mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
 				if(!$conn)echo "db connect error.";
-				$result=mysqli_query($conn,"select * from as_user");
+				$result=mysqli_query($conn,"select * from as_user4");
 				$cnt=0;
 				while($row=mysqli_fetch_array($result))
 				{
@@ -57,7 +57,7 @@
 					echo "<td><img class=profile src=".$row['pfimg']." onclick='imgclick(this)'></td>";
 					echo "<td><input type=text class=inputtext id=".$cnt."phone value=".$row['phone']."></td>";
 					echo "<td><input type=text class='inputtext' id=".$cnt."title value=\"".urldecode($row['title'])."\"></td>";
-					echo "<td><textarea rows=5 cols=50 id=".$cnt."content>".urldecode($row['content'])."</textarea></td>";
+					echo "<td><input type=text class='inputtext' id=".$cnt."content value=\"".urldecode($row['content'])."\"></td>";
 					echo "<td><center><a href=#><div class=btn onclick='update(".$row['no'].",".$cnt.")'>수정</div></a></center></td>";
 					echo "<td><center><a href='#'><div class=btn onclick='del(".$row['no'].")'>삭제</div></a></center></td>";
 					echo "</tr>";
@@ -67,6 +67,6 @@
 		
 	</table>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-	<script src="js/member.js"></script>
+	<script src="js/member4.js"></script>
 </body>
 </html>

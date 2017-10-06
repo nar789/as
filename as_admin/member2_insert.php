@@ -7,7 +7,7 @@
 	
 	$conn=mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
 	if(!$conn)echo "error!";
-	echo "insert into as_user values(null,'$phone','$title','$content','$pfurl')";
-	$result=mysqli_query($conn,"insert into as_user values(null,'$phone','$title','$content','$pfurl')");
+	echo "insert into as_user2 values(null,'$phone','$title','$content','$pfurl')";
+	$result=mysqli_query($conn,"insert into as_user2 values(null,'$phone','$title','$content','$pfurl')");
 	mysqli_close($conn);
 ?>

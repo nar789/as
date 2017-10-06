@@ -5,7 +5,7 @@ function imgclick(obj)
 
 function del(no)
 {
-	$.post("member_del.php",
+	$.post("member3_del.php",
     {
         no:no
     },
@@ -17,7 +17,7 @@ function del(no)
 
 function update(no,cnt)
 {
-	$.post("member_update.php",
+	$.post("member3_update.php",
     {
         no:no,
         phone:$('#'+cnt+"phone").val(),
@@ -37,7 +37,7 @@ function save(){
         var title=encodeURIComponent($("#title").val());
         var content=encodeURIComponent($("#content").val());
         if(phone&&title&&content){
-            $.post("member_insert.php",
+            $.post("member3_insert.php",
             {
                 pfurl:pfurl,
                 phone:phone,

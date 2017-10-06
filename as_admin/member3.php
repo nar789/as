@@ -20,7 +20,7 @@
 			<td>저장</td>
 		</tr>
 		<tr>
-			<td><form name="upload-form" action="upload.php" method="post" enctype="multipart/form-data">
+			<td><form name="upload-form" action="upload3.php" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="MAX_FILE_SIZE" value="25242880"/>
 			<input type=file name=upload id=upload>
 			<input type=submit value='이미지업로드'>
@@ -48,7 +48,7 @@
 				include ("dblib.php");
 				$conn=mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
 				if(!$conn)echo "db connect error.";
-				$result=mysqli_query($conn,"select * from as_user");
+				$result=mysqli_query($conn,"select * from as_user3");
 				$cnt=0;
 				while($row=mysqli_fetch_array($result))
 				{
@@ -67,6 +67,6 @@
 		
 	</table>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
-	<script src="js/member.js"></script>
+	<script src="js/member3.js"></script>
 </body>
 </html>
