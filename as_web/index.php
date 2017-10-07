@@ -15,9 +15,11 @@
 	</div>
 
 	<div id=list>
+	<iframe src=m1.php id=ifr></iframe>
 	</div>
 
 	<div id=ad>
+	<iframe src=ad.php id=adifr></iframe>
 	</div>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	<script src="js/index.js"></script>
