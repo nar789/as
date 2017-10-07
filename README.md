@@ -5,4 +5,5 @@
 20171002 splash complete.
 20171005 top menu and a part of adminpage are complete.
 20171006 in asadmin, 4 menu complete without ad.
+20171007 admin complete.
 ```
