@@ -54,7 +54,12 @@
 				{
 					echo "<tr>";
 					echo "<td>".$row['no']."</td>";
-					echo "<td><img class=profile src=".$row['pfimg']." onclick='imgclick(this)'></td>";
+					echo "<td>";
+					echo "<form name=\"upload-form\" action=\"upload.php?no=".$row['no']."\" method=\"post\" enctype=\"multipart/form-data\"><input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"25242880\"/>
+						<input type=file name=upload id=upload>
+						<input type=submit value='이미지업로드'>
+						</form>";
+					echo "<img class=profile src=".$row['pfimg']." onclick='imgclick(this)'></td>";
 					echo "<td><input type=text class=inputtext id=".$cnt."phone value=".$row['phone']."></td>";
 					echo "<td><input type=text class='inputtext' id=".$cnt."title value=\"".urldecode($row['title'])."\"></td>";
 					echo "<td><textarea rows=5 cols=50 id=".$cnt."content>".urldecode($row['content'])."</textarea></td>";

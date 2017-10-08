@@ -22,7 +22,7 @@
 		echo "<img class=profile src=".$row['pfimg']." onclick='imgclick(this)'>";
 		echo "<div class=title>".urldecode($row['title'])."</div>";
 		echo "<b id=comment>내용</b><textarea readonly='readonly' rows=4 cols=60 class=content>".urldecode($row['content'])."</textarea>";
-		echo "<div class=btn><center><img src='img/dcall.png' onclick='directcall(\"".$row['phone']."\")'></center></div>";
+		echo "<div class=btn><center><img id=dcallimg src='img/dcall.png' onclick='directcall(\"".$row['phone']."\")'></center></div>";
 	?>
 	</table>
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>

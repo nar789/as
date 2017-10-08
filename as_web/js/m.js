@@ -1,6 +1,6 @@
 function imgclick(obj)
 {
-	window.open(obj.src,'_blank');
+	window.parent.postMessage(obj.src,"*");
 }
 
 function showprofile(no,g){
@@ -10,5 +10,6 @@ function showprofile(no,g){
 
 function directcall(num)
 {
-	alert(num);
+	var msg="tel:"+num;
+	window.parent.postMessage(msg,"*");
 }

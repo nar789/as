@@ -63,5 +63,14 @@
 
 	//$imgurl="./img/".$fileName;
 	$imgurl="http://iop7720.cafe24.com/asadmin/pf/".$upload_filename;
-	echo "<script>location.href=\"member4.php?url=$imgurl\"</script>";
+	$no=$_GET['no'];
+	if(!$no)
+		echo "<script>location.href=\"member4.php?url=$imgurl\"</script>";
+	else{
+		include ("dblib.php");
+		$conn=mysqli_connect($db_host,$db_user,$db_passwd,$db_name);
+		if($conn)echo "error!";
+		$result=mysqli_query($conn,"update as_user4 set pfimg='$imgurl' where no=$no");
+		echo "<script>location.href=\"member4.php\"</script>";
+	}
 ?>
