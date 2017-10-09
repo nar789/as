@@ -45,3 +45,7 @@ td{
 .install:hover{
 	background-color: #ae65ff
 }
+table{
+	width: 100%;
+	border-collapse:collapse;
+}
