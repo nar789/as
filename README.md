@@ -9,4 +9,5 @@
 20171007 profile page complete.
 20171008 all complete.
 20171009 update as about line in a row.
+20171020 add app copy file : as1,as2
 ```
