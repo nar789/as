@@ -21,6 +21,11 @@ function menuclick(obj){
 }
 
 function init(){
+	var h=$("#list").css("height");
+	h=h.substr(0,h.length-2);
+	h=parseInt(h);
+	h-=140;
+	$("#list").css("height",h+"px");
 }
 
 window.onload=init();

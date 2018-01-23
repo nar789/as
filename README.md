@@ -12,4 +12,5 @@
 20171020 add app copy file : as1,as2
 20171126 db backup.
 20171127 key change.
+20180123 update scroll with ad;
 ```
